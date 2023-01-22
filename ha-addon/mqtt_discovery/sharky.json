@@ -1,0 +1,310 @@
+{
+    "total_energy_consumption_kwh": {
+        "component": "sensor",
+        "discovery_payload": {
+            "device": {
+                "identifiers": ["wmbusmeters_{id}"],
+                "manufacturer": "Diehl",
+                "model": "{driver}",
+                "name": "{name}",
+                "sw_version": "{id}"
+            },
+            "availability": {
+                "topic": "wmbusmeters/{name}",
+                "value_template": "{{ value_json.{attribute} != 127 }}",
+                "payload_available": "True",
+                "payload_not_available": "False"
+            },
+            "enabled_by_default": true,
+            "json_attributes_topic": "wmbusmeters/{name}",
+            "state_class": "total",
+            "device_class": "energy",
+            "name": "{name} total energy consumption",
+            "state_topic": "wmbusmeters/{name}",
+            "unique_id": "wmbusmeters_{id}_{attribute}",
+            "unit_of_measurement": "kWh",
+            "value_template": "{{ value_json.{attribute} }}",
+            "icon": "mdi:home-lightning-bolt-outline"
+        }
+    },
+
+    "total_energy_consumption_tariff1_kwh": {
+        "component": "sensor",
+        "discovery_payload": {
+            "device": {
+                "identifiers": ["wmbusmeters_{id}"],
+                "manufacturer": "Diehl",
+                "model": "{driver}",
+                "name": "{name}",
+                "sw_version": "{id}"
+            },
+            "availability": {
+                "topic": "wmbusmeters/{name}",
+                "value_template": "{{ value_json.{attribute} != 127 }}",
+                "payload_available": "True",
+                "payload_not_available": "False"
+            },
+            "enabled_by_default": false,
+            "json_attributes_topic": "wmbusmeters/{name}",
+            "state_class": "total",
+            "device_class": "energy",
+            "name": "{name} total energy consumption_tariff1",
+            "state_topic": "wmbusmeters/{name}",
+            "unique_id": "wmbusmeters_{id}_{attribute}",
+            "unit_of_measurement": "kWh",
+            "value_template": "{{ value_json.{attribute} }}",
+            "icon": "mdi:home-lightning-bolt-outline"
+        }
+    },
+    "total_volume_m3": {
+        "component": "sensor",
+        "discovery_payload": {
+            "device": {
+                "identifiers": ["wmbusmeters_{id}"],
+                "manufacturer": "Diehl",
+                "model": "{driver}",
+                "name": "{name}",
+                "sw_version": "{id}"
+            },
+            "availability": {
+                "topic": "wmbusmeters/{name}",
+                "value_template": "{{ value_json.{attribute} != 127 }}",
+                "payload_available": "True",
+                "payload_not_available": "False"
+            },
+            "enabled_by_default": true,
+            "state_class": "total",
+            "device_class": "water",
+            "name": "{name} total volume",
+            "state_topic": "wmbusmeters/{name}",
+            "unique_id": "wmbusmeters_{id}_{attribute}",
+            "unit_of_measurement": "m³",
+            "value_template": "{{ value_json.{attribute} }}",
+            "icon": "mdi:water"
+        }
+    },
+
+    "volume_flow_m3h": {
+        "component": "sensor",
+        "discovery_payload": {
+            "device": {
+                "identifiers": ["wmbusmeters_{id}"],
+                "manufacturer": "Diehl",
+                "model": "{driver}",
+                "name": "{name}",
+                "sw_version": "{id}"
+            },
+            "availability": {
+                "topic": "wmbusmeters/{name}",
+                "value_template": "{{ value_json.{attribute} != 127 }}",
+                "payload_available": "True",
+                "payload_not_available": "False"
+            },
+            "enabled_by_default": true,
+            "state_class": "measurement",
+            "name": "{name} volume flow",
+            "state_topic": "wmbusmeters/{name}",
+            "unique_id": "wmbusmeters_{id}_{attribute}",
+            "unit_of_measurement": "m³/h",
+            "value_template": "{{ value_json.{attribute} }}",
+            "icon": "mdi:waves-arrow-right"
+        }
+    },
+
+
+    "power_kw": {
+        "component": "sensor",
+        "discovery_payload": {
+            "device": {
+                "identifiers": ["wmbusmeters_{id}"],
+                "manufacturer": "Diehl",
+                "model": "{driver}",
+                "name": "{name}",
+                "sw_version": "{id}"
+            },
+            "availability": {
+                "topic": "wmbusmeters/{name}",
+                "value_template": "{{ value_json.{attribute} != 127 }}",
+                "payload_available": "True",
+                "payload_not_available": "False"
+            },
+            "enabled_by_default": true,
+            "json_attributes_topic": "wmbusmeters/{name}",
+            "state_class": "measurement",
+            "device_class": "energy",
+            "name": "{name} power consumption",
+            "state_topic": "wmbusmeters/{name}",
+            "unique_id": "wmbusmeters_{id}_{attribute}",
+            "unit_of_measurement": "kW",
+            "value_template": "{{ value_json.{attribute} }}",
+            "icon": "mdi:home-lightning-bolt-outline"
+        }
+    },
+
+    "flow_temperature_c": {
+        "component": "sensor",
+        "discovery_payload": {
+            "device": {
+                "identifiers": ["wmbusmeters_{id}"],
+                "manufacturer": "Diehl",
+                "model": "{driver}",
+                "name": "{name}",
+                "sw_version": "{id}"
+            },
+            "availability": {
+                "topic": "wmbusmeters/{name}",
+                "value_template": "{{ value_json.{attribute} != 127 }}",
+                "payload_available": "True",
+                "payload_not_available": "False"
+            },
+            "enabled_by_default": true,
+            "state_class": "measurement",
+            "device_class": "temperature",
+            "name": "{name} Water flow temperature",
+            "state_topic": "wmbusmeters/{name}",
+            "unique_id": "wmbusmeters_{id}_{attribute}",
+            "unit_of_measurement": "°C",
+            "value_template": "{{ value_json.{attribute} }}",
+            "icon": "mdi:thermometer-water"
+        }
+    },
+
+    "return_temperature_c": {
+        "component": "sensor",
+        "discovery_payload": {
+            "device": {
+                "identifiers": ["wmbusmeters_{id}"],
+                "manufacturer": "Diehl",
+                "model": "{driver}",
+                "name": "{name}",
+                "sw_version": "{id}"
+                },
+            "availability": {
+                "topic": "wmbusmeters/{name}",
+                "value_template": "{{ value_json.{attribute} != 127 }}",
+                "payload_available": "True",
+                "payload_not_available": "False"
+            },
+            "enabled_by_default": true,
+            "state_class": "measurement",
+            "device_class": "temperature",
+            "name": "{name} Water return temperature",
+            "state_topic": "wmbusmeters/{name}",
+            "unique_id": "wmbusmeters_{id}_{attribute}",
+            "unit_of_measurement": "°C",
+            "value_template": "{{ value_json.{attribute} }}",
+            "icon": "mdi:thermometer-water"
+        }
+    },
+
+
+    "temperature_difference_c": {
+        "component": "sensor",
+        "discovery_payload": {
+            "device": {
+                "identifiers": ["wmbusmeters_{id}"],
+                "manufacturer": "Diehl",
+                "model": "{driver}",
+                "name": "{name}",
+                "sw_version": "{id}"
+            },
+            "availability": {
+                "topic": "wmbusmeters/{name}",
+                "value_template": "{{ value_json.{attribute} != 127 }}",
+                "payload_available": "True",
+                "payload_not_available": "False"
+            },
+            "enabled_by_default": false,
+            "state_class": "measurement",
+            "device_class": "temperature",
+            "name": "{name} Water temperature difference",
+            "state_topic": "wmbusmeters/{name}",
+            "unique_id": "wmbusmeters_{id}_{attribute}",
+            "unit_of_measurement": "°C",
+            "value_template": "{{ value_json.{attribute} }}",
+            "icon": "mdi:thermometer-water"
+        }
+    },
+    "operating_time_h": {
+        "component": "sensor",
+        "discovery_payload": {
+            "device": {
+                "identifiers": ["wmbusmeters_{id}"],
+                "manufacturer": "Diehl",
+                "model": "{driver}",
+                "name": "{name}",
+                "sw_version": "{id}"
+            },
+                "availability": {
+                    "topic": "wmbusmeters/{name}",
+                    "value_template": "{{ value_json.{attribute} != 127 }}",
+                    "payload_available": "True",
+                    "payload_not_available": "False"
+                },
+            "enabled_by_default": false,
+            "entity_category": "diagnostic",
+            "name": "{name} Operating Time hours",
+            "unique_id": "wmbusmeters_{id}_{attribute}",
+            "state_topic": "wmbusmeters/{name}",
+            "value_template": "{{ value_json.{attribute} }}",
+            "device_class": "duration",
+            "icon": "mdi:calendar-clock"
+            }
+        },
+    "timestamp": {
+    "component": "sensor",
+    "discovery_payload": {
+        "device": {
+            "identifiers": ["wmbusmeters_{id}"],
+            "manufacturer": "Diehl",
+            "model": "{driver}",
+            "name": "{name}",
+            "sw_version": "{id}"
+        },
+            "availability": {
+                "topic": "wmbusmeters/{name}",
+                "value_template": "{{ value_json.{attribute} != 127 }}",
+                "payload_available": "True",
+                "payload_not_available": "False"
+            },
+        "enabled_by_default": false,
+        "entity_category": "diagnostic",
+        "name": "{name} timestamp",
+        "unique_id": "wmbusmeters_{id}_{attribute}",
+        "state_topic": "wmbusmeters/{name}",
+        "value_template": "{{ value_json.{attribute} }}",
+        "device_class": "timestamp",
+        "icon": "mdi:timelapse"
+        }
+    },
+
+    "rssi_dbm": {
+    "component": "sensor",
+    "discovery_payload": {
+        "device": {
+            "identifiers": ["wmbusmeters_{id}"],
+            "manufacturer": "Diehl",
+            "model": "{driver}",
+            "name": "{name}",
+            "sw_version": "{id}"
+        },
+        "availability": {
+            "topic": "wmbusmeters/{name}",
+            "value_template": "{{ value_json.{attribute} != 127 }}",
+            "payload_available": "True",
+            "payload_not_available": "False"
+        },
+        "entity_category": "diagnostic",
+        "name": "{name} rssi",
+        "unique_id": "wmbusmeters_{id}_{attribute}",
+        "state_topic": "wmbusmeters/{name}",
+        "value_template": "{{ value_json.{attribute} }}",
+        "icon": "mdi:signal",
+        "unit_of_measurement": "dbm",
+        "device_class": "signal_strength",
+        "state_class": "measurement",
+        "enabled_by_default": false
+        }
+    }
+}
+
