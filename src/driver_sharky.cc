@@ -154,6 +154,17 @@ namespace
             .set(MeasurementType::Instantaneous)
             .set(VIFRange::TemperatureDifference)
             );
+
+       addNumericFieldWithExtractor(
+            "operating_time_h",
+            "How long the meter has been collecting data.",
+            DEFAULT_PRINT_PROPERTIES,
+            Quantity::Time,
+            VifScaling::Auto,
+            FieldMatcher::build()
+            .set(MeasurementType::Instantaneous)
+            .set(VIFRange::OperatingTime)
+            );
     }
 }
 
